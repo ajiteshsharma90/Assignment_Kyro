@@ -21,8 +21,7 @@ RUN apt-get update \
 
 COPY . .
 
-RUN chmod u+x /usr/local/bin/init.sh
 EXPOSE 8000 2222
 
 #CMD ["python", "/code/manage.py", "runserver", "0.0.0.0:8000"]
-ENTRYPOINT ["init.sh"]
+ENTRYPOINT ["main.py"]
